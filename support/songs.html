@@ -10,99 +10,65 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
-    <a href="../index.html" class="nav-logo">
-      <img src="../icon.png" alt="StageBook" />
-      <span>StageBook</span>
-    </a>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="index.html" class="active">Support</a>
-    </div>
+    <a href="../index.html" class="nav-logo"><img src="../icon.png" alt="StageBook" /><span>StageBook</span></a>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="index.html" class="active">Support</a></div>
   </div>
   <a href="../index.html#download" class="nav-cta">Download Free</a>
 </nav>
 
-<div class="breadcrumb">
-  <a href="index.html">Support</a> &rsaquo; <span>Songs</span>
-</div>
+<div class="breadcrumb"><a href="index.html">Support</a><span class="sep">›</span><span class="current">Songs</span></div>
 
-<section class="content-hero">
-  <h1>📄 <span class="gold">Songs</span></h1>
-  <p>Your song library is the heart of StageBook. Everything you need to know about managing your songs.</p>
+<section class="page-hero">
+  <h1>Your <span>Songs</span></h1>
+  <p>Your personal song library — the heart of StageBook.</p>
 </section>
 
-<div class="content-wrapper">
+<div class="content">
+  <h2>Adding Songs</h2>
+  <p>Tap the + button to create a new song. Enter a title and your lyrics. You can also add metadata like key, tempo, artist, album, and tags.</p>
+  <div class="placeholder-img"><span class="icon">📸</span>Screenshot: Adding a new song</div>
 
-  <div class="content-section">
-    <h2>Adding Songs</h2>
-    <p>Tap the <strong>+</strong> button to add a new song. You can enter a title, artist, lyrics, and tags. Songs are saved automatically as you type.</p>
+  <h2>Formatting Your Lyrics</h2>
+  <p>Use section headers to organize your lyrics. Wrap section names in square brackets and StageBook will automatically format them.</p>
+  <h3>Section Headers</h3>
+  <p>Type headers like [Verse 1], [Chorus], [Bridge], etc. Chorus sections are automatically indented so they stand out visually.</p>
+  <div class="placeholder-img"><span class="icon">📸</span>Screenshot: Formatted lyrics with section headers</div>
 
-    <div class="screenshot-placeholder">
-      <div class="icon">📱</div>
-      Screenshot: Song editor view
-    </div>
+  <h3>Inline Chords</h3>
+  <p>Add chords directly in your lyrics. StageBook highlights them so they're easy to spot while performing.</p>
 
-    <div class="tip-box">
-      <div class="label">💡 Tip</div>
-      <p>Use section headers like <strong>[Verse]</strong>, <strong>[Chorus]</strong>, and <strong>[Bridge]</strong> in your lyrics to keep them organized and easy to follow on stage.</p>
-    </div>
+  <h2>Tags & Organization</h2>
+  <p>Add tags to songs to organize them by genre, mood, era, or anything else. Use tags to quickly filter your library.</p>
+  <div class="placeholder-img"><span class="icon">📸</span>Screenshot: Tag filter chips</div>
+
+  <h2>Search & Sort</h2>
+  <p>Search your entire library instantly by title, artist, or lyrics content. Sort by title, date added, or date modified.</p>
+
+  <h2>Favorites</h2>
+  <p>Tap the heart icon to mark songs as favorites. Filter your library to show only favorites when you need quick access to your go-to songs.</p>
+
+  <h2>Full Screen Mode</h2>
+  <p>Tap the expand icon for a clean, distraction-free view of your lyrics. Big text, no UI clutter — perfect for reading on stage under dim lights.</p>
+  <div class="placeholder-img"><span class="icon">📸</span>Screenshot: Full screen lyrics view</div>
+
+  <h2>Transpose</h2>
+  <p>Shift all chords in a song up or down by semitone. Useful when a vocalist needs a different key or you're playing with alternate tuning.</p>
+
+  <div class="tip">
+    <div class="tip-label">Tip</div>
+    <p>Transpose works on the fly without changing the saved song. Your original key is always preserved.</p>
   </div>
 
-  <div class="content-section">
-    <h2>Search and Filter</h2>
-    <p>As your library grows, you'll want to find songs quickly. Use the search bar to search by title, artist, or even lyrics content. Use tag filters to narrow down your list.</p>
-
-    <div class="screenshot-placeholder">
-      <div class="icon">📱</div>
-      Screenshot: Search and tag filtering
-    </div>
-  </div>
-
-  <div class="content-section">
-    <h2>Sorting</h2>
-    <p>Sort your song list by title, artist, date added, or date modified. Tap the sort button to change the order — it remembers your preference.</p>
-  </div>
-
-  <div class="content-section">
-    <h2>Favorites</h2>
-    <p>Mark songs as favorites for quick access. Your favorites appear at the top of the list when you filter by favorites, making it easy to find the songs you perform most often.</p>
-  </div>
-
-  <div class="content-section">
-    <h2>Full Screen Mode</h2>
-    <p>When you're on stage, tap the full screen button to see just the lyrics — no distractions, no menus, just the words you need. Swipe or scroll to move through the song.</p>
-
-    <div class="video-placeholder">
-      <div class="icon">🎬</div>
-      Video: Full screen performance mode
-    </div>
-  </div>
-
-</div>
-
-<div class="page-nav">
-  <a href="getting-started.html">
-    <div class="label">← Previous</div>
-    <div class="title">Getting Started</div>
-  </a>
-  <a href="charts.html" class="next">
-    <div class="label">Next →</div>
-    <div class="title">Charts</div>
-  </a>
+  <h2>Streaming Links</h2>
+  <p>Attach links from Spotify, Apple Music, YouTube, or Bandcamp to any song. StageBook auto-detects the service and opens it in the right app with one tap.</p>
 </div>
 
 <footer>
-  <div class="footer-logo"><img src="../hogbodylabs-badge.svg" />StageBook</div>
+  <div class="footer-logo"><img src="../hogbodylabs-badge.svg" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" />StageBook</div>
   <p>&copy; 2026 HogBody Labs. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="index.html">Support</a>
-    <a href="https://hogbodylabs.com">HogBody Labs</a>
-  </div>
+  <div class="footer-links"><a href="#">Privacy Policy</a><a href="index.html">Support</a><a href="https://hogbodylabs.com">HogBody Labs</a></div>
 </footer>
-
 </body>
 </html>

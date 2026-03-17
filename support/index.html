@@ -7,291 +7,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0f0f11;
-      --bg2:       #18181c;
-      --bg3:       #1f1f25;
-      --gold:      #f5a623;
-      --gold-dim:  #c4831a;
-      --text:      #f0f0f0;
-      --muted:     #888;
-      --border:    rgba(255,255,255,0.08);
-      --radius:    14px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 40px;
-      background: rgba(15,15,17,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-    }
-
-    .nav-logo span {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--gold); }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: #000;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .nav-cta:hover { background: #ffc04a; }
-
-    /* HERO */
-    .page-hero {
-      padding: 120px 24px 40px;
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 900;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-
-    .page-hero h1 span {
-      background: linear-gradient(135deg, #f5a623, #ff6b35);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-hero p {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* CARD GRID */
-    .card-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color 0.2s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .card:hover {
-      border-color: rgba(245,166,35,0.3);
-      transform: translateY(-2px);
-    }
-
-    .card-icon {
-      font-size: 32px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .card-arrow {
-      font-size: 14px;
-      color: var(--gold);
-      font-weight: 600;
-      margin-top: auto;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    footer .footer-logo {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    footer p {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 13px;
-    }
-    footer a:hover { color: var(--gold); }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
-      footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 24px 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
   <div class="nav-left">
-    <a href="../index.html" class="nav-logo">
-      <img src="../icon.png" alt="StageBook" />
-      <span>StageBook</span>
-    </a>
+    <a href="../index.html" class="nav-logo"><img src="../icon.png" alt="StageBook" /><span>StageBook</span></a>
     <div class="nav-links">
       <a href="../index.html">Home</a>
       <a href="index.html" class="active">Support</a>
     </div>
   </div>
-  <a href="../index.html#download" class="nav-cta">
-    Download Free
-  </a>
+  <a href="../index.html#download" class="nav-cta">Download Free</a>
 </nav>
 
-<!-- HERO -->
-<section class="page-hero">
+<section class="page-hero" style="padding-top:120px;">
   <h1>How can we <span>help?</span></h1>
   <p>Guides, tips, and walkthroughs to help you get the most out of StageBook.</p>
 </section>
 
-<!-- CARD GRID -->
 <div class="card-grid">
-
   <a href="getting-started.html" class="card">
     <div class="card-icon">🚀</div>
     <h3>Getting Started</h3>
     <p>New to StageBook? Start here. A quick walkthrough of the basics to get you up and running.</p>
     <div class="card-arrow">Learn more →</div>
   </a>
-
   <a href="songs.html" class="card">
     <div class="card-icon">📄</div>
     <h3>Songs</h3>
     <p>Your song library — adding lyrics, formatting, tags, search, favorites, and full screen mode.</p>
     <div class="card-arrow">Learn more →</div>
   </a>
-
   <a href="charts.html" class="card">
     <div class="card-icon">🎼</div>
     <h3>Charts</h3>
     <p>Personal charts vs. band charts — what they are, how they work, and why there are two places for them.</p>
     <div class="card-arrow">Learn more →</div>
   </a>
-
   <a href="recordings.html" class="card">
     <div class="card-icon">🎤</div>
     <h3>Recordings</h3>
     <p>Record ideas, import audio files, and attach recordings to songs. Never lose a great take.</p>
     <div class="card-arrow">Learn more →</div>
   </a>
-
   <a href="bands.html" class="card">
     <div class="card-icon">🎸</div>
     <h3>Bands</h3>
     <p>Create a band, invite members, and coordinate shows, rehearsals, setlists, and more — together.</p>
     <div class="card-arrow">Learn more →</div>
   </a>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo"><img src="../hogbodylabs-badge.svg" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;" />StageBook</div>
   <p>&copy; 2026 HogBody Labs. All rights reserved.</p>
@@ -301,6 +68,5 @@
     <a href="https://hogbodylabs.com">HogBody Labs</a>
   </div>
 </footer>
-
 </body>
 </html>
